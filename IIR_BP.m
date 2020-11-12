@@ -77,3 +77,8 @@ fvtool(num_z,den_z)
 [H,f] = freqz(num_z,den_z,1024*1024, 330e3);
 plot(f,abs(H))
 grid
+figure;
+% phase plot
+[H,f] = freqz(num_z,den_z,1024*1024, 330e3);
+plot(f,angle(H))
+grid

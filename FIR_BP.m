@@ -34,6 +34,11 @@ fvtool(BP_FIR);
 [H,f] = freqz(BP_FIR,1,1024, F_sampling);
 plot(f,abs(H))
 grid
+figure;
+% Plotting angle response of filter
+[H,f] = freqz(BP_FIR,1,1024, F_sampling);
+plot(f,angle(H))
+grid
 
 function response = low_pass_ideal_resp(wc,M)
 

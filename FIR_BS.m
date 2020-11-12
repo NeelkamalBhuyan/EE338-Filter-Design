@@ -34,6 +34,11 @@ fvtool(BS_FIR);
 [H,f] = freqz(BS_FIR,1,1024, F_sampling);
 plot(f,abs(H))
 grid
+figure;
+% Plotting phase response of filter
+[H,f] = freqz(BS_FIR,1,1024, F_sampling);
+plot(f,angle(H))
+grid
 
 function response = low_pass_ideal_resp(wc,M)
 

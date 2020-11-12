@@ -71,5 +71,10 @@ fvtool(num_z,den_z)
 
 % magnitude plot
 [H,f] = freqz(num_z,den_z,1024*1024, 260e3);
-plot(f,abs(H))
+plot(f,angle(H))
+grid
+figure;
+% phase plot
+[H,f] = freqz(num_z,den_z,1024*1024, 260e3);
+plot(f,angle(H))
 grid
